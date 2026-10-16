@@ -1,0 +1,54 @@
+{
+	"name": "cno-plugin-current-date-block",
+	"version": "1.0.0",
+	"description": "Choctaw Plugin template",
+	"prettier": "@wordpress/prettier-config",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"engines": {
+		"node": ">= 24",
+		"npm": ">=12"
+	},
+	"author": "Choctaw Nation of Oklahoma",
+	"files": [
+		"build",
+		"inc",
+		"README.md",
+		"LICENSE",
+		"CHANGELOG.md",
+		"cno-plugin-current-date-block.php",
+		"vendor"
+	],
+	"scripts": {
+		"build": "wp-scripts build --blocks-manifest --webpack-copy-php",
+		"lint:css": "npx stylelint '**/*.scss' '**/*.css' --fix --allow-empty-input",
+		"lint:js": "npx eslint --fix",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts build && wp-scripts plugin-zip",
+		"start": "wp-scripts start --blocks-manifest --webpack-copy-php",
+		"optimize-composer":"composer install --optimize-autoloader --no-dev --prefer-dist --no-interaction --no-progress"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^2.1.1",
+		"@wordpress/block-editor": "^18.1.0",
+		"@wordpress/blocks": "^16.2.0",
+		"@wordpress/components": "^42.0.0",
+		"@wordpress/date": "^5.57.0",
+		"@wordpress/eslint-plugin": "^27.1.0",
+		"@wordpress/icons": "^18.0.0",
+		"@wordpress/scripts": "^36.1.0",
+		"@wordpress/ui": "^0.24.0",
+		"eslint": "^9",
+		"globals": "^17.13.0",
+		"prettier": "npm:wp-prettier@^3",
+		"typescript": "^6"
+	},
+	"allowScripts": {
+		"@parcel/watcher@2.6.0": true,
+		"core-js@3.50.0": true,
+		"core-js-pure@3.50.0": true,
+		"fsevents@2.3.3": true,
+		"unrs-resolver@1.12.2": true
+	}
+}

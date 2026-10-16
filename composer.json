@@ -1,0 +1,24 @@
+{
+	"name": "choctaw-nation/cno-plugin-current-date-block",
+	"description": "A current date block for WordPress.",
+	"type": "project",
+	"version":"1.0.0",
+	"autoload": {
+		"classmap": [
+			"inc/"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"phpcs": "phpcs inc/ cno-plugin-current-date-block.php --extensions=php --ignore=/vendor/,/build/",
+		"phpcbf": "phpcbf inc/ cno-plugin-current-date-block.php --extensions=php --ignore=/vendor/,/build/"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "*"
+	}
+}
