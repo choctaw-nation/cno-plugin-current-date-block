@@ -25,7 +25,7 @@
 		"lint:css": "npx stylelint '**/*.scss' '**/*.css' --fix --allow-empty-input",
 		"lint:js": "npx eslint --fix",
 		"packages-update": "wp-scripts packages-update",
-		"plugin-zip": "wp-scripts build && wp-scripts plugin-zip",
+		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start --blocks-manifest --webpack-copy-php",
 		"optimize-composer":"composer install --optimize-autoloader --no-dev --prefer-dist --no-interaction --no-progress"
 	},

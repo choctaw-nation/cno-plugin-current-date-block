@@ -3,13 +3,13 @@
  * Plugin Name: CNO Current Date Block
  * Plugin URI: https://github.com/choctaw-nation/cno-plugin-current-date-block
  * Description: Displays the current date in a block.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Choctaw Nation of Oklahoma
  * Author URI: https://www.choctawnation.com
  * Text Domain: cno
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Requires PHP: 8.2
+ * Requires PHP: 8.4
  * Requires at least: 7.1.0
  * Tested up to: 7.1.3
  *
@@ -29,7 +29,7 @@ if ( ! file_exists( $cno_autoload_path ) ) {
 	add_action(
 		'admin_notices',
 		static function () {
-			echo '<div class="notice notice-error"><p>Choctaw Plugin Starter is missing required dependencies. Please run Composer install or deploy the plugin with its vendor directory included.</p></div>';
+			echo '<div class="notice notice-error"><p>CNO Current Date Block is missing required dependencies. Please run Composer install or deploy the plugin with its vendor directory included.</p></div>';
 		}
 	);
 

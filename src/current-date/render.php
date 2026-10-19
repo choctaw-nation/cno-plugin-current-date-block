@@ -7,7 +7,8 @@
  */
 
 $today       = new DateTime( 'now', wp_timezone() );
-$block_props = get_block_wrapper_attributes( array( 'datetime' => $today->format( 'U' ) ) );
+$a11y_format = $attributes['format'] === 'Y' ? 'Y' : 'Y-m-d';
+$block_props = get_block_wrapper_attributes( array( 'datetime' => $today->format( $a11y_format ) ) );
 ?>
 <time <?php echo $block_props; ?>>
 	<?php echo $today->format( $attributes['format'] ); ?>
